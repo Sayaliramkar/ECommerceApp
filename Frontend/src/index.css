@@ -1,3 +1,7 @@
-@tailwing base;
-@tailwing components;
-@tailwing utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block;
+}
