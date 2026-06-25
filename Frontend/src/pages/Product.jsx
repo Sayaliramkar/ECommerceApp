@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProduct from '../components/RelatedProduct';
 
 const Product = () => {
 
@@ -13,7 +14,7 @@ const Product = () => {
 
   const fetchProductData = async () => {
      console.log(products[0]);
-  console.log(productId);
+    console.log(productId);
     products.map((item) => {
       if (item._id == productId) {
         setProductData(item)
@@ -98,7 +99,7 @@ const Product = () => {
          </div>
 
          {/* Display related products */}
-         
+         <RelatedProduct category={productData.category} subCategory={productData.subCategory} />
     </div>
   ) : <div className='opacity-0'></div>
 }
