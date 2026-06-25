@@ -12,6 +12,8 @@ const Product = () => {
   const [size,setSize] = useState('');
 
   const fetchProductData = async () => {
+     console.log(products[0]);
+  console.log(productId);
     products.map((item) => {
       if (item._id == productId) {
         setProductData(item)
@@ -72,9 +74,31 @@ const Product = () => {
               ))}
             </div>
           </div>
+
+          <button className='bg-black text-white active:bg-gray-700 px-8 py-3 text:sm'>ADD TO CART</button>
+          <hr className='mt-8 sm:w-4/5'/>
+          <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
+            <p>100% originel Product</p>
+            <p>Cash On DElivery is Available on this product</p>
+            <p>Easy return and excahnge policy within 7 days</p>
+          </div>
         </div>
       </div>
+         {/* Description & review section */}
 
+         <div className='mt-20'>
+          <div className='flex'>
+            <b className='border px-5 py-5 text-sm'>Descriptions</b>
+            <p className='border px-5 py-5 text-sm'>Reviews (122)</p>
+          </div>
+          <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+            <p>An e-commerce website is on online platform that facilities the buying and selling of products or services over the internet. it serves as avirtual marketplace where </p>
+            <p>E-commerce websites ttypically display products or services along with detaild</p>
+          </div>
+         </div>
+
+         {/* Display related products */}
+         
     </div>
   ) : <div className='opacity-0'></div>
 }
