@@ -6,8 +6,6 @@ const ProductItem = ({ id, image, name, price }) => {
 
   const { currency } = useContext(ShopContext);
 
-  console.log("Product ID:", id);
-  console.log(`/product/${id}`);
 
   return (
     <Link className='text-gray-700 cursor-pointer' to={`/product/${id}`}>
